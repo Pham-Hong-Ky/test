@@ -8,26 +8,11 @@ import Register from "../pages/register";
 import productdetails from "../pages/productdetails";
 import Payment from "../pages/payment";
 
-
-export type RootStackParamList = {
-  Home: undefined;
-  Profile: undefined;
-  Login: undefined;
-  Register: undefined;
-  ProductDetails: undefined;
-  Payment: undefined;
-};
-
-// export type DrawerParamList = {
-//   Home: undefined;
-//   Login: undefined;
-// };
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
 export default function Router() {
   return (
-    <NavigationContainer>
+
       <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}> 
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />
@@ -36,6 +21,6 @@ export default function Router() {
         <Stack.Screen name="ProductDetails" component={productdetails} />
         <Stack.Screen name="Payment" component={Payment} />
       </Stack.Navigator>
-    </NavigationContainer>
+
   );
 }

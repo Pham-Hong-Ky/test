@@ -2,15 +2,12 @@ import { useNavigation } from "@react-navigation/native";
 import { FlatList, Image, StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from "react-native";
 import React from "react";
 import BackButton from "../components/BackButton";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../router/router";
 import Product from "../components/Product";
 
-// type NavigationProp = NativeStackNavigationProp<RootStackParamList, "Home">; // stack
-// type NavigationProp = DrawerNavigationProp<DrawerParamList, 'Home'>; // drawer
+
 
 const Home = () => {
-    // const navigation = useNavigation<NavigationProp>();
+
     const navigation = useNavigation<any>();
     const handleProductPress = () => {
         navigation.navigate("ProductDetails");

@@ -2,15 +2,18 @@ import Router from "./router/router";
 import MyDrawer from "./router/drawer";
 import './gesture-handler';
 import 'react-native-reanimated';
+import { NavigationContainer } from "@react-navigation/native";
 
-// import { MyTabs } from "./router/tabs"
+import { MyTabs } from "./router/tabs"
 
 const App = () => {
 
   return (
-    // <Router />
-    <MyDrawer />
-    // <MyTabs/>
+    <NavigationContainer>
+      <Router />
+      {/* <MyDrawer />
+      <MyTabs /> */}
+    </NavigationContainer>
   )
 }
 
